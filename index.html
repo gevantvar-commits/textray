@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textray — Chat X-Ray</title>
+<meta name="description" content="X-ray any chat screenshot in 5 seconds: interest balance, red & green flags and what to text back. 100% on your iPhone.">
+<meta property="og:title" content="Textray — Chat X-Ray">
+<meta property="og:description" content="See what their texts really mean. 100% private, on-device.">
+<meta property="og:image" content="shot1.png">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg:#07080C; --surface:#11131A; --text:#F5F7FA; --muted:#9BA1B0; --accent:#7C5CFF; --beam:#22D3EE; --green:#34D399; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  .glow { position:fixed; inset:0; pointer-events:none;
+    background: radial-gradient(circle at 80% 0%, rgba(124,92,255,.35), transparent 45%), radial-gradient(circle at 10% 90%, rgba(34,211,238,.15), transparent 45%); }
+  main { position:relative; max-width:1080px; margin:0 auto; padding:56px 16px 80px; }
+  header { display:flex; align-items:center; gap:14px; }
+  header img { width:56px; height:56px; border-radius:14px; }
+  header b { font-size:22px; }
+  .mono { font:600 13px/1.4 ui-monospace, Menlo, monospace; letter-spacing:.06em; text-transform:uppercase; color:var(--beam); }
+  h1 { font-size:clamp(38px, 7vw, 68px); line-height:1.04; letter-spacing:-.02em; margin:28px 0 14px; }
+  .lead { color:var(--muted); font-size:20px; max-width:640px; }
+  .cta { display:inline-block; margin-top:26px; background:var(--accent); color:#fff; text-decoration:none; font-weight:700;
+    padding:16px 28px; border-radius:16px; box-shadow:0 12px 40px rgba(124,92,255,.45); }
+  .badge { display:inline-flex; gap:8px; align-items:center; margin-top:18px; color:var(--green); font-weight:600; font-size:14px;
+    border:1px solid rgba(52,211,153,.35); background:rgba(52,211,153,.1); border-radius:999px; padding:6px 14px; }
+  .shots { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:48px; }
+  .shots img { width:100%; border-radius:22px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:48px; }
+  .card { background:var(--surface); border-radius:18px; padding:20px; }
+  .card h3 { margin:0 0 6px; font-size:18px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  footer { margin-top:56px; color:var(--muted); font-size:14px; display:flex; gap:18px; flex-wrap:wrap; }
+  footer a { color:var(--beam); }
+  @media (max-width: 640px) { .shots { grid-template-columns:1fr 1fr; } .shots img:nth-child(3) { display:none; } }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<main>
+  <header><img src="icon.png" alt=""><b>Textray</b></header>
+  <div class="mono" style="margin-top:40px">Chat X-Ray • 5-second scan</div>
+  <h1>See what their texts really mean.</h1>
+  <p class="lead">Upload a chat screenshot and get the interest balance, hidden red &amp; green flags, a verdict you can share, and three replies worth sending — analyzed entirely on your iPhone.</p>
+  <a class="cta" id="store" href="#">Get Textray on the App Store</a>
+  <div><span class="badge">🔒 100% on-device • works in Airplane Mode</span></div>
+
+  <div class="shots">
+    <img src="shot1.png" alt="X-ray scan of a chat screenshot">
+    <img src="shot2.png" alt="Interest balance and verdict">
+    <img src="shot3.png" alt="Shareable verdict card">
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>⚖️ Interest balance</h3><p>Who's actually putting in the effort — messages, words, questions and real plans.</p></div>
+    <div class="card"><h3>🚩 Red &amp; green flags</h3><p>Vague plans, dry replies, deflection, late-night pings — and genuine curiosity.</p></div>
+    <div class="card"><h3>💬 Reply coach</h3><p>Confident, playful and direct replies that keep your self-respect intact.</p></div>
+    <div class="card"><h3>🛡️ Pre-send check</h3><p>Paste your draft and see if it sounds needy before you hit send.</p></div>
+  </div>
+
+  <footer id="support">
+    <span>Support: <a href="mailto:support@gedai.io">support@gedai.io</a></span>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
+    <span>For entertainment &amp; communication coaching only.</span>
+  </footer>
+</main>
+</body>
+</html>
